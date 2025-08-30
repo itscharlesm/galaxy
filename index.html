@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Galaxy Notes</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="css/images/moon.png">
 </head>
+
 <body>
-  <!-- Developed by Charles -->
-  
+  <!-- Background elements -->
+  <div class="starfield"></div>
+
+  <!-- Nebula effects -->
+  <div class="nebula nebula-1"></div>
+  <div class="nebula nebula-2"></div>
+
+  <!-- Planets -->
+  <div class="planet planet-1"></div>
+  <div class="planet planet-2"></div>
+  <div class="planet planet-3"></div>
+
+  <!-- Asteroids -->
+  <div class="asteroid asteroid-1"></div>
+  <div class="asteroid asteroid-2"></div>
+  <div class="asteroid asteroid-3"></div>
+
+  <!-- Cosmic dust -->
+  <div class="cosmic-dust"></div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    🎵 Enable audio • ⭐ Drag stars to explore • 🌌 Journey through the galaxy
+  </div>
+
+  <!-- Audio control -->
+  <div class="audio-control" onclick="toggleMusic()">
+    🔊 Cosmic Audio
+  </div>
+
+  <!-- Progress indicator -->
+  <div class="progress-indicator"></div>
+
+  <!-- Star cards -->
   <div class="star-card">
-    <p>Turn on your volume,</p>
-    <p>tap a star,</p>
-    <p>and drag it across the galaxy ✨</p>
+    <p>Welcome to our cosmic journey,</p>
+    <p>where every star tells a story ✨</p>
   </div>
 
   <div class="star-card">
-    <p>To my favorite Star 🌟</p>
+    <p>To my brightest constellation 🌟</p>
   </div>
 
   <div class="star-card">
-    <p>Even when life feels dark,</p>
-    <p>you shine the brightest 💖</p>
+    <p>In this vast universe,</p>
+    <p>you're my guiding light 💫</p>
   </div>
 
   <div class="star-card image">
-    <p>Like the moon,</p>
-    <p>I’ll always orbit around you 🌙</p>
-    <img src="css/images/moon.png" alt="moon">
+    <p>Like celestial bodies in orbit,</p>
+    <p>we're forever connected 🌙</p>
+    <img
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cdefs%3E%3CradialGradient id='moonGrad' cx='0.3' cy='0.3'%3E%3Cstop offset='0%25' stop-color='%23f8f9fa'/%3E%3Cstop offset='100%25' stop-color='%23adb5bd'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='75' cy='75' r='70' fill='url(%23moonGrad)'/%3E%3Ccircle cx='60' cy='50' r='8' fill='%23868e96' opacity='0.4'/%3E%3Ccircle cx='90' cy='70' r='5' fill='%23868e96' opacity='0.4'/%3E%3Ccircle cx='85' cy='95' r='6' fill='%23868e96' opacity='0.4'/%3E%3C/svg%3E"
+      alt="moon">
   </div>
 
   <div class="star-card image">
-    <p>You are my galaxy,</p>
-    <p>and I love getting lost in you 💫</p>
-    <img src="css/images/galaxy.png" alt="galaxy">
+    <p>You are my entire galaxy,</p>
+    <p>infinite and beautiful 🌌</p>
+    <img
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cdefs%3E%3CradialGradient id='galaxyGrad'%3E%3Cstop offset='0%25' stop-color='%23ff006e'/%3E%3Cstop offset='30%25' stop-color='%238338ec'/%3E%3Cstop offset='60%25' stop-color='%233a86ff'/%3E%3Cstop offset='100%25' stop-color='%23000814'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cellipse cx='75' cy='75' rx='70' ry='30' fill='url(%23galaxyGrad)' transform='rotate(45 75 75)'/%3E%3Ccircle cx='75' cy='75' r='3' fill='%23ffbe0b'/%3E%3Ccircle cx='45' cy='60' r='1' fill='white'/%3E%3Ccircle cx='105' cy='90' r='1' fill='white'/%3E%3Ccircle cx='90' cy='45' r='1' fill='white'/%3E%3Ccircle cx='60' cy='105' r='1' fill='white'/%3E%3C/svg%3E"
+      alt="galaxy">
   </div>
 
   <div class="star-card heart"></div>
-  
+
   <!-- Shooting stars container -->
   <div class="shooting-stars"></div>
 
-  <audio id="bgMusic" src="css/music/cosmic_love.mp3" loop></audio>
-
-  <script src="js/index.js"></script>
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+  </audio>
 </body>
 </html>
