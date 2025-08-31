@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Galaxy Notes</title>
+  <title>Galaxy</title>
+  <link rel="icon" type="image/png" href="css/images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -29,12 +31,18 @@
 
   <!-- Instructions -->
   <div class="instructions">
-    🎵 Enable audio • ⭐ Drag stars to explore • 🌌 Journey through the galaxy
+    🎵 Enable audio • ⭐ Drag cards to explore • 🌌 Journey through the galaxy
   </div>
 
-  <!-- Audio control -->
+  <!-- Put this inside <body>, before the control -->
+  <audio id="bgMusic" loop>
+    <source src="css/sounds/christmas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Audio control button -->
   <div class="audio-control" onclick="toggleMusic()">
-    🔊 Cosmic Audio
+    🔇 Christmas Audio
   </div>
 
   <!-- Progress indicator -->
@@ -73,6 +81,8 @@
 
   <div class="star-card heart"></div>
 
+  <script src="js/index.js"></script>
+
   <!-- Shooting stars container -->
   <div class="shooting-stars"></div>
 
@@ -80,4 +90,5 @@
     <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
   </audio>
 </body>
+
 </html>

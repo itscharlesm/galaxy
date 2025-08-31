@@ -238,20 +238,19 @@ function toggleMusic() {
 
   if (musicEnabled) {
     audio.pause();
-    button.innerHTML = '🔇 Cosmic Audio';
+    button.innerHTML = '🔇 Christmas Audio';
     musicEnabled = false;
   } else {
     audio.play().catch(() => {
-      button.innerHTML = '🔇 Audio Unavailable';
+      button.innerHTML = '🔇 Christmas Audio (Unavailable)';
     });
-    button.innerHTML = '🔊 Cosmic Audio';
+    button.innerHTML = '🔊 Christmas Audio';
     musicEnabled = true;
   }
 }
 
 function playStarSound() {
   if (musicEnabled) {
-    // Create a simple tone for star interaction
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
