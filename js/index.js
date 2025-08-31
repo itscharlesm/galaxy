@@ -238,13 +238,13 @@ function toggleMusic() {
 
   if (musicEnabled) {
     audio.pause();
-    button.innerHTML = '🔇 Christmas Audio';
+    button.innerHTML = '🔇 All I want for Christmas';
     musicEnabled = false;
   } else {
     audio.play().catch(() => {
-      button.innerHTML = '🔇 Christmas Audio (Unavailable)';
+      button.innerHTML = '🔇 Audio (Unavailable)';
     });
-    button.innerHTML = '🔊 Christmas Audio';
+    button.innerHTML = '🔊 All I want for Christmas';
     musicEnabled = true;
   }
 }
